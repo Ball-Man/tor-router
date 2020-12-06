@@ -7,6 +7,7 @@
  ExecStart=/usr/bin/tor-router
  RemainAfterExit=yes
  ExecStop=/usr/bin/iptables -F OUTPUT
+ ExecStop=/usr/bin/iptables -t nat -F
  TimeoutStopSec=180
  KillMode=process
  KillSignal=SIGINT
